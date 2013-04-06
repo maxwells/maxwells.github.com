@@ -24,6 +24,12 @@ By default, all suggested terms are allowed, so if a user deletes one, it can be
   </div>
 </div>
 
+The third tag-list is read only
+ <div id="read-only" class="tag-list">
+    <div class="tags">
+    </div>
+ </div>
+
 Here are some other colors (pulled right from bootstrap styling, so if you change the bootstrap colors, these will all change accordingly)
 <div id="three" class="tag-list">
   <div class="tags">
@@ -62,6 +68,10 @@ $(function() {
   var alsoTags = $('#one').tags();
   alsoTags.removeTag("tag c");
   console.log(tags.removeTag("tag a").renameTag("tag b", "new tag b").addTag("added tag").getTags());
+  $('#read-only').tags( {
+    tagData: ['some', 'tags','that', 'aren\'t', 'editable'],
+    readOnly: true
+  });
   $('#two').tags( {
     suggestions : ["there", "were", "some", "suggested", "terms", "super", "secret", "stuff"],
     restrictTo : ["restrict", "to", "these"],
