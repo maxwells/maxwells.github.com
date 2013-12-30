@@ -10,7 +10,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : maxwells
-tagline: Site Tagline
+tagline: Things that I work on
 author :
   name : Max Lahey
   email : maxwellslahey@gmail.com
